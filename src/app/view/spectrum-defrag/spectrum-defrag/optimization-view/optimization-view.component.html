@@ -1,0 +1,283 @@
+<div ng-controller="optviewController" class="optview-container">
+    <div class="optview">
+        <!-- <div id="mydiv">
+            <img src="https://imgd.aeplcdn.com//642x361//n/cw/ec/128129/royalenfield-hunter-350-left-side-view29.jpeg?isig=0&wm=2&q=75"
+                class="ajax-loader" />
+        </div> -->
+
+        <div class="defrag-option">
+            <div class="selectadd">
+                <div class="heading">
+                    Defragmentation Options
+                </div>
+                <div class="divname">
+                    Optimization Metric
+                </div>
+                <div class="selectbox">
+
+                    <select class="selecttext" name="option" id="option" ng-model="opt_type">
+                        <option value="bandreserve">Band reserve</option>
+                        <option value="high_slot_mark">High-Slot Mark (HSM)</option>
+                        <option value="shanon_entropy">Shanon Entropy</option>
+                    </select>
+                    <!-- <input id="searchbtn" type="button" value="Load"> -->
+                </div>
+
+
+
+                <div class="add-band ">
+                    <table>
+                        <tr class="body12">
+                            <th>Band</th>
+                            <th>n</th>
+                            <th>m</th>
+                            <!-- <th></th> -->
+                        </tr>
+                        <tbody ng-repeat="i in bb">
+                            <tr>
+                                <td> </td>
+                                <td></td>
+                                <td></td>
+
+                                <!-- <td><input type="button" ng-click="Remove($index)" value="Remove" /></td> -->
+
+                            </tr>
+                        </tbody>
+                        <tfoot>
+
+                            <tr ng-show="IsVisible">
+                                <td><input type="text" ng-model="i" disabled /></td>
+                                <td><input type="number" ng-model="n" /></td>
+                                <td><input type="number" ng-model="m" /></td>
+                                <!-- <td><input type="button" ng-click="Add()" value="Add" /></td> -->
+                            </tr>
+
+
+                            <!-- <td><input type="button" ng-click="Add()" value="Add" /></td> -->
+                        </tfoot>
+                    </table>
+                    <div class="add">
+                        <a href="" class="addSymbol" ng-click="Add()">&plus;</a>
+                        &nbsp;Add Band
+                    </div>
+
+                    <div class="apply-btn">
+                        <button ng-disabled="validateBand(n,m)" ng-click="apply()">Apply</button>
+                    </div>
+                    <small ng-show="validateBandn(n)" ng style="color: red">
+                        * n value range [-1000,1000]
+                    </small>
+                    <br>
+                    <small ng-show="validateBandm(m)" ng style="color: red">
+                        * m range [25, 150] & multiple of 12.5
+                    </small>
+
+                </div>
+
+            </div>
+            <div class="radiobtn divname">
+                <div class="opt-constrains radio-group">
+                    <div class="item">Optimization Constraints</div>
+                    <div class="item"><input type="radio" name="optconst" id="rerouteonly" value="REROUTE_ONLY"
+                            ng-model="opt_cofig_type">
+                        <div> Reroute Only</div>
+                    </div>
+                    <div class="item"><input type="radio" name="optconst" id="recoloronly" value="RECOLOR_ONLY"
+                            ng-model="opt_cofig_type">
+                        <div> Recolor Only</div>
+                    </div>
+                    <div class="item"><input type="radio" name="optconst" id="recolorandreroute"
+                            value="RECOLOR_AND_REROUTE_ONLY" ng-model="opt_cofig_type">
+                        <div> Recolor And Reroute</div>
+                    </div>
+                </div>
+                <div class="demand-repack radio-group">
+                    <div class="item">Allow demand repacking</div>
+                    <div class="item"><input type="radio" name="adr" id="yes" value="TRUE" ng-model="repacking">
+                        <div>Yes</div>
+                    </div>
+                    <div class="item"><input type="radio" name="adr" id="no" value="FALSE" ng-model="repacking">
+                        <div> No </div>
+                    </div>
+                </div>
+                <div class="recnfg-steps radio-group">
+                    <div class="item"> Limit Reconfiguration Steps </div>
+                    <div class="item"><input type="radio" name="lrs" id="nolimit" value="NO_LIMIT"
+                            ng-model="re_config_step">
+                        <div>No limit</div>
+                    </div>
+
+                    <div class="item" style="margin-bottom: 3px;" id="lessthen"><input type="radio" name="lrs"
+                            value="LESS_THAN" ng-model="re_config_step">
+                        <div>Less than</div>
+                        <div class="limitbox"><input type="text" ng-model="lessthan" placeholder="<-->"></div>
+
+                    </div>
+                    <!--                    <div class="item" style="margin-top: 0px;"><input type="radio" name="lrs" id="optimizedsuggetion">-->
+                    <!--                        <div> Optimized Suggestion</div>-->
+                    <!--                    </div>-->
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="migration-option ">
+            <div class="mheading">
+                Migration options
+            </div>
+            <div class="container divname">
+                <div class="cost-param">
+                    <div class="radio-group">
+                        <div class="item" style="margin-left: 0px;">Define cost parameters</div>
+                        <div class="box ">
+                            <div>Turn off</div>
+                            <div class="inerbox">
+                                <div>Complete</div>
+                                <div class="textbox"><input type="number" ng-model="costp.complete" name="complete"
+                                        id="" placeholder="<-->">
+                                </div>
+                                <small ng-show="validate(costp.complete)" ng style="color: red">
+                                    * please enter positive number
+                                </small>
+                            </div>
+
+                            <div class="inerbox">
+                                <div>Protected</div>
+                                <div class="textbox"><input type="number" ng-model="costp.protected" name="protected"
+                                        id="" placeholder="<-->"></div>
+                                <small ng-show="validate(costp.protected)" ng style="color: red">
+                                    * please enter positive number
+                                </small>
+                            </div>
+                        </div>
+                        <div class="box ">
+                            <div>Reroute only</div>
+
+                            <div class="inerbox">
+                                <div>Fully Disjoint to protection</div>
+                                <div class="textbox"><input type="number" ng-model="costp.rr_full_dsjnt"
+                                        name="rr_full_dsjnt" id="" placeholder="<-->"></div>
+                                <small ng-show="validate(costp.rr_full_dsjnt)" ng style="color: red">
+                                    * please enter positive number
+                                </small>
+                            </div>
+                            <div class="inerbox">
+                                <div>Partially Disjoint to protection</div>
+                                <div class="textbox"><input type="number" ng-model="costp.rr_prtial_dsjnt"
+                                        name="rr_prtial_dsjnt" id="" placeholder="<-->"></div>
+                                <small ng-show="validate(costp.rr_prtial_dsjnt)" ng style="color: red">
+                                    * please enter positive number
+                                </small>
+                            </div>
+                            <div class="inerbox">
+                                <div>Recolor only</div>
+                                <div class="textbox"><input type="number" ng-model="costp.rr_recolor" name="rr_recolor"
+                                        id="" placeholder="<-->"></div>
+                                <small ng-show="validate(costp.rr_recolor)" ng style="color: red">
+                                    * please enter positive number
+                                </small>
+                            </div>
+                        </div>
+                        <div class="box ">
+                            <div>Reroute and recolor</div>
+                            <div class="inerbox">
+                                <div>Fully Disjoint to protection</div>
+                                <div class="textbox"><input type="number" ng-model="costp.both_full_dsjnt"
+                                        name="both_full_dsjnt" id="" placeholder="<-->"></div>
+                                <small ng-show="validate(costp.both_full_dsjnt)" ng style="color: red">
+                                    * please enter positive number
+                                </small>
+                            </div>
+                            <div class="inerbox">
+                                <div>Partially Disjoint to protection</div>
+                                <div class="textbox"><input type="number" ng-model="costp.both_prtial_dsjnt"
+                                        name="both_prtial_dsjnt" id="" placeholder="<-->"></div>
+                                <small ng-show="validate(costp.both_prtial_dsjnt)" ng style="color: red">
+                                    * please enter positive number
+                                </small>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!-- {{costp}} -->
+                <div class="seq-constrains">
+
+                    <div class="radio-group">
+                        <div class="item">Define sequence constraints</div>
+                        <div class="item" style="margin-top: 20px;">Allow temp state</div>
+                        <div class="item"><input type="radio" name="ats" id="yes" value="REROUTE_ONLY">
+                            <div>Yes</div>
+
+                        </div>
+                        <div class="yesradio">
+                            <div class="item"><input type="radio" name="yes" id="yesrerouteonly" value="REROUTE_ONLY"
+                                    ng-model="alw_temp_sts">
+                                <label for="yesrerouteonly">
+                                    <div>Reroute Only</div>
+                                </label>
+                            </div>
+                            <div class="item"><input type="radio" name="yes" id="recoloronly" value="RECOLOR_ONLY"
+                                    ng-model="alw_temp_sts">
+                                <div> Recolor Only</div>
+                            </div>
+                            <div class="item"><input type="radio" name="yes" id="recolorandreroute"
+                                    value="REROUTE_AND_RECOLOR" ng-model="alw_temp_sts">
+                                <div> Both recolor and reroute</div>
+                            </div>
+                        </div>
+
+                        <div class="item"><input type="radio" name="ats" id="no" ng-model="alw_temp_sts" value="NO">
+                            <div> No </div>
+                        </div>
+                    </div>
+                    <div class="radio-group">
+                        <div class="item">Migration method</div>
+                        <div class="item"><input type="radio" name="mm" id="yes" value="SEQUENTIAL" ng-model="mig_mthd">
+                            <div>Sequential</div>
+                        </div>
+                        <div class="item"><input type="radio" name="mm" id="no" value="PARALLEL" ng-model="mig_mthd">
+                            <div> Parallel </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="optbottons-container">
+
+            <div class="optbuttons">
+                <!-- <div class="optbtn optbackbtn">
+                    <button><a ng-click="changeColor(2)" href="#/sampleCustom/spectrumview">
+                        < Back</a></button>
+                </div>
+                <div class="optbtn optnextbtn">
+                    <button><a ng-click="changeColor(4)" href="#/sampleCustom/configview">Next > </a></button>
+                </div> -->
+                <div class="optbtn optrunbtn">
+                    <button ng-click="run(); decrement(); increment11()"> Run </button>
+                </div>
+
+
+                <!--                <md-tab label="Section 2">-->
+                <!--                    <md-content layout-padding>-->
+                <!--                        <div>-->
+                <!--                            Section 2 Content-->
+                <!--                        </div>-->
+                <!--                    </md-content>-->
+                <!--                </md-tab>-->
+            </div>
+
+        </div>
+
+
+    </div>
+    <!-- <div class="finishBox" style="color:aliceblue; overflow: auto;" ng-show="change"><br><br>
+        Optimization Finish <br><br>And Optimization request is: <br><br>{{opt_request}}
+        <button class="okbutton" style="color:aliceblue" ng-click="increment()">Ok</button>
+    </div> -->
+</div>

@@ -1,0 +1,104 @@
+.cnfigstepsview {
+
+    padding: 2%;
+    margin-right: 10px;
+    background-color: #DAD9D9;
+    /* border: 2px solid black; */
+    height: 100vh;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 13px;
+    /* identical to box height, or 100% */
+
+    padding-top: 1%;
+    color: #535353;
+}
+
+.scrol-container {
+    background-color: white;
+    height: 50%;
+    border-radius: 3px;
+    padding: 3px;
+}
+
+.scrol {
+    /* background-color: white; */
+    border: 2px solid #d4d4d4;
+    border-radius: 3px;
+    height: 98%;
+}
+
+/* .table-container {} */
+
+table {
+    width: 100%;
+    /* margin: 5px; */
+    border-collapse: collapse;
+
+
+}
+
+th {
+    background-color: #F0F0F0;
+
+}
+
+
+td,
+th {
+    border-bottom: 1px solid #d4d4d4;
+    text-align: left;
+    vertical-align: center;
+    height: 20px;
+    padding: 8px;
+    column-gap: normal;
+}
+
+table {
+    border: 1px solid #d4d4d4;
+
+}
+
+.cnfigbtn-container {
+    float: right;
+}
+
+.cnfigbtn button a {
+    text-decoration: none;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    /* identical to box height, or 114% */
+
+
+    color: #838383;
+}
+
+.cnfigbtn button {
+    /* position: absolute;
+    bottom: 15px;
+    right: 40px; */
+    height: 30px;
+    width: 80px;
+    background: #ffff;
+    border: none;
+    border-radius: 3px;
+
+}
+
+.nb {
+    position: absolute;
+    bottom: 15px;
+    right: 40px;
+}
+
+.bb {
+    position: absolute;
+    bottom: 15px;
+    right: 130px;
+
+}

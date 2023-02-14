@@ -1,0 +1,232 @@
+.spectview-container {
+    height: 100vh;
+    /* / background: #FFFFFF; / */
+    /* / padding: 2%; / */
+
+    /* / display: flex;/  */
+    justify-content: center;
+    align-items: center;
+    /* / width: 100%;/ */
+    border-radius: 3px;
+    background-color: #DAD9D9;
+    padding-top: 0%;
+    margin-right: 10px;
+}
+
+.spectrumview {
+    padding: 2%;
+    padding-top: 0px;
+
+}
+
+.center-data {
+    text-align: center;
+    height: 15px;
+    border: none;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.spectrumview .btn {
+    position: absolute;
+    bottom: 5px;
+    right: 33px;
+
+
+    background: #FFFFFF;
+    border-radius: 3px;
+}
+
+.spectrumview .prevbtn {
+    position: absolute;
+    bottom: 13px;
+    right: 207px;
+    width: 72px;
+    height: 30px;
+    border: none;
+    background: #FFFFFF;
+    border-radius: 3px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    /* / identical to box height,
+    or 114% /  */
+    color: #838383;
+}
+
+.spectrumview .nextbtn {
+    position: absolute;
+    border: none;
+    bottom: 13px;
+    right: 123px;
+    width: 72px;
+    height: 30px;
+    background: #ffffff;
+    border-radius: 3px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    /* / identical to box height,
+    or 114% /  */
+}
+
+
+.spectrumview .analyzeBtn {
+    position: absolute;
+    bottom: 13px;
+    right: 33px;
+    width: 72px;
+    height: 30px;
+    border: none;
+    background-color: #68A0E6;
+    border-radius: 3px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    /* / identical to box height,
+    or 114% / */
+}
+
+.spectrumview a {
+    text-decoration: none;
+    color: #838383;
+    /* / display: inline-block;/ / padding: 8px 16px;/ */
+}
+
+.spectrumview a:hover {
+    /* / background-color: #ddd;/ */
+    color: black;
+}
+
+/* .previous {
+    background-color: #f1f1f1;
+    color: black;
+}
+
+.next {
+    background-color: #68A0E6;
+    color: white;
+} */
+
+.round {
+    border-radius: 50%;
+}
+
+.initial {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 19px;
+    /* / identical to box height,
+    or 148% / */
+    color: #535353;
+}
+
+
+
+
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    /* / padding: 10px;/  */
+    text-align: left;
+    border-radius: 5px;
+    background-color: white;
+
+
+}
+
+/* (vertical) on small screens / @media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+    }
+} */
+
+
+.flex {
+    margin: 30px;
+    display: flex;
+    position: absolute;
+    bottom: 0px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 13px;
+
+    align-items: center;
+    color: #535353;
+}
+
+.free {
+    background: #DAD9D9;
+    width: 8px;
+    height: 8px;
+    border: 1px solid #535353;
+}
+
+.protection {
+    background: #FF9292;
+    width: 8px;
+    height: 8px;
+    border: 1px solid #535353;
+}
+
+.main {
+    background: #68A0E6;
+    width: 8px;
+    height: 8px;
+    border: 1px solid #535353;
+}
+
+
+
+
+
+.data-container {
+    /* / height: 200px;/  */
+    width: 100%;
+    background-color: white;
+
+    /* / border: 2px solid black;/ */
+}
+
+.data {
+    height: 20px;
+
+    /* / border: 2px solid black;/ / padding: 5px;/ */
+    display: flex;
+}
+
+.bitdata {
+    height: 9px;
+    width: 4px;
+    margin-top: 3px;
+    margin-right: 2px;
+    /* / border: 1px solid #535353;/ */
+}
+
+.red {
+    background: #FF9292;
+}
+
+.blue {
+    background: #68A0E6;
+}
+
+.white {
+    background: #DAD9D9;
+}
+
+.free-slot {
+    background: white;
+}

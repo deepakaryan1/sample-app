@@ -1,0 +1,87 @@
+<!-- deployview -->
+<div>
+
+    <div ng-controller="deployController" class="deployview-container">
+        <div class="deployview">
+            <!--            <style parse-style>.css_class {color: {{ch}};}</style>-->
+            <!--            <span class="css_class">{{ch}} text</span><br>-->
+            <div class="deployview-title">Status Window</div>
+            <div class="statuswindow" style="overflow: auto;">
+                <div ng-show="showData" ng-repeat="msg in statusWindow track by $index">
+                    <div>-> </div>
+
+                </div>
+                <!-- <div>Step 1 configured 100% finished</div>
+                <div>Step 2 configured 100% finished</div>
+                <div>Step 3 configured 80%</div> -->
+
+            </div>
+            <div class="progress-container">
+                <div class="deploy-progress">
+                    <div ng-show="showData && rectProgress" class="text-center">Progress</div><br>
+                    <div ng-show="showData && rectProgress " ng-repeat="data in progressData track by $index"> <label
+                            for="">Group 0</label>
+
+                        <div class="progress">
+
+                            <div class="bar spanish" style="width: 40%">
+
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div ng-show="showData && circleProgress " class="circle-wrap">
+                    <div style="background-image: conic-gradient(#8CBFFF 40%, #E9E9E9 0);" class="circle">
+                        <div class="mask full">
+                            <div class="fill"></div>
+                        </div>
+                        <div class="mask half">
+                            <div class="fill"></div>
+                        </div>
+                        <div class="inside-circle">
+
+                            <!--                            <small style="font-size: 9px">Progress</small>-->
+
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- Buttons -->
+            <div class="depbtn  btn">
+                <!--                <button ng-click="deploy();">Dep</button>-->
+                <button ng-disabled="deployBtn" ng-click="deploy();">
+                    Deploy</button>
+            </div>
+            <div class="depbtn1 btn1">
+                <!--                <button><a href="">Pause </a></button>-->
+                <button ng-disabled="pauseBtn" ng-click="pause();"></button>
+            </div>
+            <div class="depbtn1  btn2">
+                <!--                <button disabled><a href="">Revert</a></button>-->
+                <button ng-disabled="revertBtn" ng-click="revert();">Revert </button>
+            </div>
+            <div class="depbtn1  btn3">
+                <button ng-disabled="stopBtn" ng-click="stop();">Stop</button>
+            </div>
+
+
+
+        </div>
+
+
+
+    </div>
+
+
+</div>

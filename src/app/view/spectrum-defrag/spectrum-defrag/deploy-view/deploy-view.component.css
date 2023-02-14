@@ -1,0 +1,418 @@
+.deployview-title {
+    margin: 5px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 13px;
+    /* / identical to box height, or 108% / */
+
+
+    color: #535353;
+}
+
+.deployview {
+    padding: 2%;
+    margin-right: 10px;
+    background-color: #DAD9D9;
+    height: 100vh;
+    padding-top: 1%;
+
+}
+
+.statuswindow {
+    height: 65vh;
+    background: #FFFFFF;
+    padding: 5px;
+    padding-left: 10px;
+
+    /* / display: flex; / */
+    justify-content: center;
+    align-items: center;
+    width: 33%;
+    border-radius: 3px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 19px;
+    /* / or 148% / */
+
+
+    color: #838383;
+}
+
+.title1 {
+    text-align: center;
+    /* / margin-left: 400px; / */
+}
+
+.deploy-progress {
+    position: absolute;
+    top: 25%;
+    left: 40%;
+
+}
+
+.deploy-progress label {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 13px;
+    /* / identical to box height, or 108% / */
+
+
+    color: #535353;
+}
+
+.progress {
+    /* / border: 1px solid #B0B0B0; / */
+    width: 300px;
+    padding: 2px;
+    border-radius: 6px;
+    box-shadow: 0 0 3px rgba(9, 151, 73, 0);
+    backdrop-filter: blur(2px) brightness(101%);
+    /* / float: right; / */
+    margin-left: 100px;
+    background: white;
+    position: relative;
+    bottom: 20px;
+}
+
+.text-center {
+    display: flex;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 13px;
+    /* / identical to box height, or 108% / */
+
+
+    color: #535353;
+}
+
+.bar {
+    /* / width: 300px; / */
+    height: 18px;
+    width: 20em;
+    /* / background: forestgreen; / */
+    /* / box-shadow: inset 0px 12px 1.7px #FFFFFF33; / */
+    border-radius: 6px;
+    text-align: right;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 13px;
+    padding-top: 5px;
+    /* / or 108% / */
+    color: #FFFFFF;
+
+}
+
+
+.bar.spanish2 {
+    background: rgba(56, 136, 228, 0.767);
+    width: 80%;
+}
+
+.bar.spanish {
+    background: rgba(56, 136, 228, 0.767);
+
+}
+
+/*
+.bar.spanish1 {
+    background: rgba(56, 136, 228, 0.767);
+    width: 40%;
+}
+
+.bar.spanish2 {
+    background: rgba(56, 136, 228, 0.767);
+    width: 80%;
+}
+
+.bar.spanish3 {
+    background: rgba(56, 136, 228, 0.767);
+    width: 100%;
+} */
+
+
+
+
+/* /  / */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/** <--- CIRCLE STYLES ---> **/
+.wrap-circles {
+
+
+    display: flex;
+    min-height: 100vh;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1rem;
+
+    /* / background: #000; / */
+}
+
+.circle {
+    position: absolute;
+    bottom: 33%;
+    right: 36%;
+    /* / position: relative; / */
+    width: 150px;
+    height: 150px;
+    margin: 0.5rem;
+    border-radius: 50%;
+    background: #e6e4e3;
+    overflow: hidden;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 13px;
+    /* / or 41% / */
+
+
+    color: #535353;
+
+}
+
+/* .circle.per-25 {
+    background-image: conic-gradient(#B5838D 25%, #FFCDB2 0);
+}
+
+.circle.per-50 {
+    background-image: conic-gradient(#B5838D 50%, #FFCDB2 0);
+}
+
+.circle.per-75 {
+    background-image: conic-gradient(#B5838D 75%, #FFCDB2 0);
+}
+
+.circle.per-100 {
+    background-image: conic-gradient(#B5838D 100%, #FFCDB2 0);
+} */
+
+.circle .inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 115px;
+    height: 115px;
+    background: #000;
+    border-radius: 50%;
+    font-size: 1.85em;
+    font-weight: 300;
+    /* / color: rgba(255, 255, 255, 0.75); / */
+}
+
+
+
+
+
+
+
+body {
+    font-family: "Roboto", sans-serif;
+    /* / background:#d2eaf1; / */
+
+}
+
+.circle-wrap {
+    margin: 150px auto;
+    width: 150px;
+    height: 150px;
+    /* / background: #959297; / */
+    margin-top: -200px;
+    /* border-radius: 50%;
+  border: 1px solid #cdcbd0; */
+}
+
+.circle-wrap .circle .mask,
+.circle-wrap .circle .fill {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.circle-wrap .circle .mask {
+    clip: rect(0px, 150px, 150px, 75px);
+}
+
+.circle-wrap .inside-circle {
+    width: 122px;
+    height: 122px;
+    border-radius: 50%;
+    background: #d8d8d8;
+    line-height: 120px;
+    text-align: center;
+    margin-top: 14px;
+    margin-left: 14px;
+    /* / color: #0c0c0c; / */
+    position: absolute;
+    z-index: 100;
+    font-weight: 700;
+    font-size: 2em;
+}
+
+
+.mask .fill {
+    clip: rect(0px, 75px, 150px, 0px);
+    background-color: #569fe4;
+}
+
+/* .mask.full,
+.circle .fill {
+    animation: fill ease-in-out 3s;
+    transform: rotate(135deg);
+}
+
+@keyframes fill {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(135deg);
+    }
+} */
+
+.depbtn button {
+    height: 30.21px;
+    width: 76px;
+    background-color: #68A0E6;
+    border-radius: 3px;
+    border: none;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    margin: 5px;
+    gap: 10px;
+
+}
+
+.btn button a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.btn1 button a {
+    text-decoration: none;
+    color: #838383;
+}
+
+.btn2 button a {
+    text-decoration: none;
+    color: #838383;
+}
+
+.btn3 button a {
+    text-decoration: none;
+    color: #838383;
+}
+
+.btn {
+    position: absolute;
+    bottom: 10px;
+    right: 30px;
+}
+
+.btn1 {
+    position: absolute;
+    bottom: 10px;
+    right: 115px;
+}
+
+.btn2 {
+    position: absolute;
+    bottom: 10px;
+    right: 285px;
+}
+
+.btn3 {
+    position: absolute;
+    bottom: 10px;
+    right: 200px;
+}
+
+.depbtn1 button {
+    height: 30.21px;
+    width: 76px;
+    background-color: rgb(248, 241, 241);
+    border-radius: 3px;
+    border: none;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    margin: 5px;
+    gap: 10px;
+    top: 672px;
+    padding: 6px, 16px, 6px, 16px;
+
+
+}
+
+.finishBoxDeploy {
+    background: rgba(0, 0, 0, 0.7);
+    width: 20%;
+    height: 20%;
+    position: absolute;
+    top: 35%;
+    right: 10;
+    bottom: 0;
+    left: 35%;
+    display: block;
+    text-align: center;
+}
+
+.okbuttonDeploy {
+    background-color: #68A0E6;
+    height: 30px;
+    width: 60px;
+    border-radius: 3px;
+    border: #68A0E6;
+}
+
+.dismissButton {
+    background-color: #68A0E6;
+    height: 30px;
+    width: 60px;
+    border-radius: 3px;
+    border: #68A0E6;
+    margin-left: 100px;
+}
+
+.continueButton {
+    background-color: #68A0E6;
+    height: 30px;
+    width: 60px;
+    border-radius: 3px;
+    border: #68A0E6;
+    margin-left: 35px;
+}

@@ -1,0 +1,333 @@
+.optview {
+    display: flex;
+    background: #DAD9D9;
+    height: 100vh;
+    margin-right: 10px;
+}
+
+.mheading {
+    font-family: 'Roboto';
+    font-style: normal;
+    margin-bottom: 1vh;
+    margin-top: 1.5vh;
+    font-size: 16px;
+    line-height: 13px;
+    color: #535353;
+    font-weight: 600;
+}
+
+.heading {
+    font-family: 'Roboto';
+    font-style: normal;
+    margin-bottom: 7vh;
+    margin-top: 1.5vh;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 13px;
+    color: #535353;
+
+}
+
+.selectbox select {
+    height: 28px;
+    width: 220px;
+    border: none;
+    border-radius: 3px;
+}
+
+.selecttext {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 19px;
+
+    color: #838383;
+}
+
+.divname {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 13px;
+    /* identical to box height, or 108% */
+
+
+    color: #535353;
+}
+
+.defrag-option {
+    margin-left: 2.5%;
+    display: flex;
+}
+
+#lessthen {
+    display: flex;
+}
+
+.limitbox input[type="text"] {
+    border: none;
+    width: 42px;
+    height: 28px;
+    background-color: #FFFFFF;
+    border-radius: 3px;
+    padding-left: 5px;
+
+}
+
+.item input[type="radio"] {
+    width: 16px;
+    height: 16px;
+    border: 2px solid blue;
+
+}
+
+.radiobtn {
+    margin-top: 9vh;
+    margin-left: 6vh;
+}
+
+.radio-group .item {
+    display: flex;
+    margin: 11px;
+}
+
+.radio-group .item div {
+    margin-left: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+.radio-group {
+    margin-bottom: 28px;
+}
+
+
+
+.container {
+    display: flex;
+}
+
+.box {
+    margin-top: 15px;
+}
+
+.inerbox {
+    margin-top: 10px;
+}
+
+.inerbox div input {
+    margin-top: 5px;
+
+}
+
+.yesradio {
+    margin-left: 40px;
+}
+
+.migration-option {
+    margin-left: 20vh;
+}
+
+.seq-constrains {
+    margin-left: 10vh;
+}
+
+.inerbox {
+    margin-left: 30px;
+}
+
+.inerbox .textbox input {
+    width: 157px;
+    border: none;
+    height: 26px;
+    border-radius: 3px;
+    padding-left: 5px;
+
+}
+
+.optbottons-container {
+    position: absolute;
+    bottom: 10px;
+    right: 40px;
+}
+
+.optbtn button {
+
+    border-radius: 3px;
+    border: none;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    margin: 5px;
+
+
+}
+
+.optbackbtn button,
+.optnextbtn button {
+    height: 30px;
+    width: 73px;
+    background-color: #FFFFFF;
+
+}
+
+.optbackbtn button a,
+.optnextbtn button a {
+    text-decoration: none;
+    color: #838383;
+}
+
+.optrunbtn button {
+    height: 30px;
+    width: 57px;
+    background-color: #68A0E6;
+}
+
+.optrunbtn button a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+
+.optbuttons {
+    display: flex;
+
+}
+
+
+
+/* css for table */
+
+
+.add-band {
+    margin-top: 10px;
+    display: none;
+}
+
+.bandreserve {
+    display: block
+}
+
+.add-band table {
+    border: solid 1px #DDD;
+    border-collapse: collapse;
+    /* padding: 2px 3px; */
+
+    text-align: center;
+    border-radius: 3px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 19px;
+    /* or 148% */
+
+
+    color: #838383;
+}
+
+.add-band tr {
+    border-bottom: 1px solid #ddd;
+    /* background-color: #FFFFFF; */
+    height: 15px;
+    border-radius: 3px;
+}
+
+.body12 th {
+    background-color: #F0F0F0;
+    height: 15px;
+    width: 50px;
+    border-radius: 3px;
+}
+
+tbody tr td {
+    background-color: #FFFFFF;
+    height: 15px;
+}
+
+tfoot tr td input {
+    height: 15px;
+    width: 50px;
+}
+
+
+
+.addSymbol {
+    text-decoration: none;
+    display: inline-flex;
+    width: 15px;
+    height: 15px;
+    background: rgba(56, 136, 228, 0.767);
+    font-size: 1rem;
+    font-weight: bold;
+    color: rgb(245, 245, 248);
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+}
+
+.add {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 19px;
+    /* identical to box height, or 148% */
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+    color: #535353;
+}
+
+.apply-btn {
+    margin-left: 150px;
+}
+
+.apply-btn button {
+    cursor: pointer;
+    height: 30px;
+    width: 68px;
+
+    background-color: #68A0E6;
+    border-radius: 3px;
+    color: #FFFFFF;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    border: none;
+}
+
+.shanon_entropy {
+    display: none;
+}
+
+.finishBox {
+    background: rgba(0, 0, 0, 0.7);
+    width: 20%;
+    height: 20%;
+    position: absolute;
+    top: 35%;
+    right: 10;
+    bottom: 0;
+    left: 35%;
+    display: block;
+    text-align: center;
+}
+
+.okbutton {
+    background-color: #68A0E6;
+    height: 30px;
+    width: 60px;
+    border-radius: 3px;
+    border: #68A0E6;
+}

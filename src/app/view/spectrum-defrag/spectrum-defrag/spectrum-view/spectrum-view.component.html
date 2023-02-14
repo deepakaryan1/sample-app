@@ -1,0 +1,141 @@
+<div ng-controller="spectrumviewController" class="spectview-container">
+    <div class="spectrumview">
+
+
+        <button ng-click="analyz();decrement();" class="analyzeBtn"><a style="color:white" href="">
+                Analyze </a></button>
+
+
+        <div class="column">
+            <div class="initial" style="display:inline-block; ">&nbsp;&nbsp;&nbsp;&nbsp;Initial Spectrum</div>
+
+            <div class="card" style="overflow: auto; border-radius: 6px; height: 170px;">
+
+                <table style="position: relative; border-collapse: collapse; height: 175px;" ng-show="spectTable">
+                    <thead>
+                        <tr>
+                            <th style="position: sticky; top: 0;" class="center-data">From</th>
+                            <th style="position: sticky; top: 0;" class="center-data">-</th>
+                            <th style="position: sticky; top: 0;" class="center-data">To</th>
+                            <th style="position: sticky; top: 0;" class="center-data">Initial Metric</th>
+                            <th style="position: sticky; top: 0;" class="center-data"></th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr ng-repeat="b in bits track by $index">
+                            <td class="center-data"></td>
+                            <td class="center-data"></td>
+                            <td class="center-data"> </td>
+                            <td class="center-data" style="padding-left: 45px;padding-right: 45px;">
+                            </td>
+                            <td class="center-data" style="display: flex;">
+                                <div ng-repeat="bit in b track by $index" class="bitdata "></div>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+
+
+                </table>
+                <!-- <div class="im" style="display:inline-block;">&nbsp;From-to &nbsp;&nbsp;&nbsp; Inital metric</div>
+                    <div class="data-container" style="overflow-y: auto; overflow-x: auto;">
+                        <div class="data" ng-repeat="b in bits track by $index">
+                            <div class="dataRow" style="display:flex;">
+                                <div class="from" style="margin-right:10px; margin-left:15px;">{{data[$index].from}}
+                                </div>
+                                <div style="margin-right:10px;"> - </div>
+                                <div class="To" style="margin-right:25px;">{{data[$index].to}} </div>
+                                <div class="Imetric" style="margin-right:25px;">
+                                    {{data[$index].defragmentationMetric}}
+                                </div>
+                                <div ng-repeat="bit in b track by $index" class="bitdata {{bit}}"></div>
+                            </div>
+
+
+                        </div>
+                    </div> -->
+            </div>
+
+
+        </div>
+
+        <!--Recolored-->
+
+
+        <div ng-controller="optviewController" class="column" style="margin-top: 25px;">
+            <div class="initial" style="display:inline;">&nbsp;&nbsp;&nbsp;&nbsp;Recolored
+                Spectrum</div>
+            <div class="card" style="overflow: auto; border-radius: 6px; height: 170px;">
+
+                <table style="position: relative; border-collapse: collapse; height: 175px;" ng-show="spectTable">
+                    <thead>
+                        <tr>
+                            <th style="position: sticky; top: 0;" class="center-data">From</th>
+                            <th style="position: sticky; top: 0;" class="center-data">-</th>
+                            <th style="position: sticky; top: 0;" class="center-data">To</th>
+                            <th style="position: sticky; top: 0;" class="center-data">Initial Metric</th>
+                            <th style="position: sticky; top: 0;" class="center-data"></th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr ng-repeat="b in bits track by $index">
+                            <td class="center-data"></td>
+                            <td class="center-data"></td>
+                            <td class="center-data"> </td>
+                            <td class="center-data" style="padding-left: 45px;padding-right: 45px;">
+                            </td>
+                            <td class="center-data" style="display: flex;">
+                                <div ng-repeat="bit in b track by $index" class="bitdata "></div>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+
+
+                </table>
+                <!-- <div class="im" style="display:inline-block;">&nbsp;From-to &nbsp;&nbsp;&nbsp; Inital metric</div>
+                    <div class="data-container" style="overflow-y: auto; overflow-x: auto;">
+                        <div class="data" ng-repeat="b in bits track by $index">
+                            <div class="dataRow" style="display:flex;">
+                                <div class="from" style="margin-right:10px; margin-left:15px;">{{data[$index].from}}
+                                </div>
+                                <div style="margin-right:10px;"> - </div>
+                                <div class="To" style="margin-right:25px;">{{data[$index].to}} </div>
+                                <div class="Imetric" style="margin-right:25px;">
+                                    {{data[$index].defragmentationMetric}}
+                                </div>
+                                <div ng-repeat="bit in b track by $index" class="bitdata {{bit}}"></div>
+                            </div>
+
+
+                        </div>
+                    </div> -->
+            </div>
+
+
+        </div>
+
+
+        <div class="flex">
+            <div> Legend: Free </div>&nbsp;
+            <div class="free"></div>&nbsp;&nbsp;&nbsp;&nbsp;
+            <div> Protection </div>&nbsp;
+            <div class="protection"></div>&nbsp;&nbsp;&nbsp;&nbsp;
+            <div> Main </div>&nbsp;
+            <div class="main"></div>&nbsp;&nbsp;&nbsp;&nbsp;
+        </div>
+
+        <!-- <div class="finishBox" style="color:aliceblue; overflow: auto;" ng-show="analyzchange"><br><br>
+            Analyze request is: <br> <br><br>
+            <button class="okbutton" style="color:aliceblue" ng-click="increment()">Ok </button><br>
+            <br>
+        </div> -->
+
+    </div>
+</div>

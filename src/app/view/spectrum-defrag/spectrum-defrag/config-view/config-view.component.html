@@ -1,0 +1,91 @@
+<!-- congiguration view -->
+
+<div ng-controller="optviewController" class="cnfigstepsview-container ">
+    <div class="cnfigstepsview ">
+        <div class="">Configuration Steps</div>
+        <br>
+        <div class="scrol-container">
+            <div class="scrol">
+                <div class="table-container">
+                    <table>
+                        <tr>
+                            <th>
+                                Steps <a><img src="app/view/sampleCustom/sort.png" alt="" srcset=""></a>
+                            </th>
+
+                            <th>
+                                Demand <a><img src="app/view/sampleCustom/sort.png" alt="" srcset=""></a>
+                            </th>
+                            <th>
+                                From <a><img src="app/view/sampleCustom/sort.png" alt="" srcset=""></a>
+                            </th>
+                            <th>
+                                To <a><img src="app/view/sampleCustom/sort.png" alt="" srcset=""></a>
+                            </th>
+                        </tr>
+                        <div ng-repeat="">
+                            <tr ng-show="change11" ng-repeat="config in configData[0].migrationStep track by $index">
+                                <td></td>
+                                <td></td>
+
+                                <td>
+
+                                    <div style="display:inline;"
+                                        ng-repeat="i in configData[0].migrationStep[$index].currentPathInfo.pathLinks.link_id track by $index">
+
+                                    </div>
+                                </td>
+
+                                <td>
+
+                                    <div style="display:inline;"
+                                        ng-repeat="i in configData[0].migrationStep[$index].newPathInfo.pathLinks.link_id track by $index">
+                                    </div>
+                                </td>
+
+                            </tr>
+                            <tr ng-show="change11" ng-repeat="config in configData[1].migrationStep track by $index">
+                                <td></td>
+                                <td></td>
+
+                                <td>
+
+                                    <div style="display:inline;"
+                                        ng-repeat="i in configData[1].migrationStep[$index].currentPathInfo.pathLinks.link_id track by $index">
+                                    </div>
+                                </td>
+
+                                <td>
+
+                                    <div style="display:inline;"
+                                        ng-repeat="i in configData[1].migrationStep[$index].newPathInfo.pathLinks.link_id track by $index">
+
+                                    </div>
+                                </td>
+
+                            </tr>
+                        </div>
+
+
+                    </table>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+        <!-- <div class="cnfigbtn-container">
+              <div class="cnfigbtn">
+                  <button class="bb"><a href="#/sampleCustom/optview" ng-click="changeColor(3)">
+                      < Back</a></button>
+                  <button class="nb"><a href="#/sampleCustom/deployview" ng-click="changeColor(5)">
+                      Next > </a></button>
+              </div>
+          </div> -->
+    </div>
+
+</div>
